@@ -20,15 +20,35 @@ public class _00_ArrayCheatSheet {
 
 		
 		//6. make an array of 50 integers
-		int[] moreNums = new int[50];
+		int[] moreNums = new int[51];
 		//7. use a for loop to make every value of the integer array a random number
-		for (int i = 0; i < 50; i++) {
+		for (int i = 0; i <51; i++) {
 			Random r = new Random(i);
+			moreNums[i]=r.nextInt();
+			System.out.println(moreNums[i]);
 		}
 		//8. without printing the entire array, print only the smallest number in the array
+		int tempValue = moreNums[0];
 		
+		for (int i = 0; i < 51; i++) {
+			if (i+1==51) {
+			break;	
+			}
+			if (moreNums[i]>moreNums[i+1]) {
+				tempValue=moreNums[i+1];
+			}else {
+				continue;
+				
+			}
+			
+			
+			
+			
+		}
+		System.out.println("The lowest value is" +tempValue);
 		//9 print the entire array to see if step 8 was correct
 		
 		//10. print the largest number in the array.
+		
 	}
 }
