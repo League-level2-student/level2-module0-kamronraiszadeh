@@ -62,9 +62,14 @@ public class _02_FindTheHiddenButton implements ActionListener{
     buttons[hiddenButton].setText("ME");
 		//15. Use Thread.sleep(1000); to pause the program.
 		//    Surround it with a try/catch - use Eclipse helper for this
-		
+	try {
+		Thread.sleep(1000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 		//16. Set the text of the JButton located at hiddenButton to be blank.
-		
+		buttons[hiddenButton].setText(" ");
 	}
 
 	@Override
@@ -72,7 +77,11 @@ public class _02_FindTheHiddenButton implements ActionListener{
 		JButton buttonClicked = (JButton)e.getSource();
 		
 		//17. if the hiddenButton is clicked, tell the user that they win.
-		
-		//18. else tell them to try again
+		if (buttons[hiddenButton]== e.getSource()) {
+			JOptionPane.showMessageDialog(null, "you win");
+			
+		}
+		else {
+		JOptionPane.showMessageDialog(null, "you are a loser, try again");
 	}
-}
+	}}
