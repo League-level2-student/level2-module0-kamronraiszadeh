@@ -15,7 +15,7 @@ void setup() {
 
   //5. call the noStroke() method
 
-}
+}f
 
 void draw() {
   //6. set the background color with background(r, g, b);
